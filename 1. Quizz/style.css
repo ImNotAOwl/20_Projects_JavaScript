@@ -29,10 +29,11 @@ body {
     justify-content: center;
     margin: 20px 0;
     padding: 1%;
-    border: 1px solid black;
+    border: 1px solid rgba(224, 135, 19, 0.479);
     border-radius: 0.4em;
     width: 800px;
     height: 180px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .qst {
@@ -58,6 +59,10 @@ body {
 
 
 .btn_envoyer {
+    margin: 2% 0;
     align-self: center;
+    font-size: 2em;
+    height: 100px;
+    width: 450px;
 }
 
