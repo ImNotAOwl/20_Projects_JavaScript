@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,53 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
 </head>
+
 <body>
+
+    <h1 class="titre">Quizz Culture générale !</h1>
+
+    <form action="post" class="quizz">
+        <div class="box_qst_rep">
+            <h3 class="qst">Qui est l'empereur de France le 2 décembre 1804 ?</h3>
+            <div class=""><input type="radio"><label for="1">Clovis</label></div>
+            <div><input type="radio"><label for="1">Abraham Lincoln</label></div>
+            <div><input type="radio"><label for="1">Napoleon Bonaparte</label></div>
+        </div>
+        <div class="box_qst_rep">
+            <h3 class="qst">Quelle est la date d'indépendance des États-Unis ?</h3>
+            <div><input type="radio"><label for="1">4 juillet 1776</label></div>
+            <div><input type="radio"><label for="1">18 avril 1856</label></div>
+            <div><input type="radio"><label for="1">30 juin 1925</label></div>
+        </div>
+        <div class="box_qst_rep">
+            <h3 class="qst">La chute de l'empire Romain se situe en ?</h3>
+            <div><input type="radio"><label for="1">15 ap. J.-C.</label></div>
+            <div><input type="radio"><label for="1">395 ap. J.-C.</label></div>
+            <div><input type="radio"><label for="1">-740 av. J.-C.</label></div>
+        </div>
+        <div class="box_qst_rep">
+            <h3 class="qst">Quelle est la capitale de la Slovénie ?</h3>
+            <div><input type="radio"><label for="1">Ljubljana</label></div>
+            <div><input type="radio"><label for="1">Belgrade</label></div>
+            <div><input type="radio"><label for="1">Bratislava</label></div>
+        </div>
+        <div class="box_qst_rep">
+            <h3 class="qst">Combien d'habitants compte l'Irlande en 2020 ?</h3>
+            <div><input type="radio"><label for="1">1,365 Million</label></div>
+            <div><input type="radio"><label for="1">21 Millions</label></div>
+            <div><input type="radio"><label for="1">4,9 Millions</label></div>
+        </div>
+        <input type="submit" value="C'est votre dernier mot ?" class="btn_envoyer">
+    </form>
+
+    <div class="resultat">
+        <h2></h2>
+        <p></p>
+
+    </div>
     
-
-
 
     <script src="app.js"></script>
 </body>
+
 </html>
