@@ -7,6 +7,7 @@
 
 body {
     font-family: Russo, sans-serif;
+    margin-bottom: 4%;
 }
 
 .titre {
@@ -26,12 +27,11 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: stretch;
     margin: 20px 0;
     padding: 2rem;
     border: 1px solid rgba(224, 135, 19, 0.479);
     border-radius: 0.4em;
-    width: 800px;
-    height: 180px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -60,7 +60,31 @@ body {
     margin: 2% 0;
     align-self: center;
     font-size: 2em;
-    height: 100px;
-    width: 450px;
+    padding: 1%;
+    border-radius: 0.2em;
+    transition: 0.4s ease-out;
 }
 
+.btn_envoyer:hover {
+    cursor: pointer;
+    margin: 2% 0;
+    align-self: center;
+    font-size: 2em;
+    padding: 1%;
+    border-radius: 0.2em;
+    background-color: rgba(224, 135, 19, 0.479);
+    color: rgb(255, 255, 255);
+    transition: 0.2s ease-in;
+}
+
+
+.resultat {
+    display: block;
+    text-align: center;
+    margin: auto;
+    padding: 2rem;
+    border: 1px solid rgba(224, 135, 19, 0.479);
+    border-radius: 0.4em;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: fit-content;
+}
