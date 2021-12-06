@@ -1,5 +1,4 @@
 
-
 *, ::before, ::after {
     box-sizing: border-box;
     margin: 0;
@@ -56,7 +55,6 @@ body {
     font-size: 1.4em;
     margin-left: 1%;
 }
-
 
 .btn_envoyer {
     margin: 2% 0;
