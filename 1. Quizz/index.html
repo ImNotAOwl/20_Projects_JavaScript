@@ -15,10 +15,10 @@
 
     <form action="post" class="quizz">
 
-        <div class="box_qst_rep">
+        <div class="box_qst">
             <h3 class="qst">Qui est l'empereur de France le 2 décembre 1804 ?</h3>
             <div>
-                <input type="radio" value="clovis" id="clovis" name="qst1">
+                <input type="radio" value="clovis" id="clovis" name="qst1" checked>
                 <label for="clovis">Clovis</label>
             </div>
             <div>
@@ -31,10 +31,10 @@
             </div>
         </div>
 
-        <div class="box_qst_rep">
+        <div class="box_qst">
             <h3 class="qst">Quelle est la date d'indépendance des États-Unis ?</h3>
             <div>
-                <input type="radio" value="juillet" id="juillet" name="qst2">
+                <input type="radio" value="juillet" id="juillet" name="qst2" checked>
                 <label for="juillet">4 juillet 1776</label>
             </div>
             <div>
@@ -47,10 +47,10 @@
             </div>
         </div>
 
-        <div class="box_qst_rep">
+        <div class="box_qst">
             <h3 class="qst">La chute de l'empire Romain se situe en ?</h3>
             <div>
-                <input type="radio" value="15" id="15" name="qst3">
+                <input type="radio" value="15" id="15" name="qst3" checked>
                 <label for="15">15 ap. J.-C.</label>
             </div>
             <div>
@@ -63,10 +63,10 @@
             </div>
         </div>
 
-        <div class="box_qst_rep">
+        <div class="box_qst">
             <h3 class="qst">Quelle est la capitale de la Slovénie ?</h3>
             <div>
-                <input type="radio" value="ljubljana" id="ljubljana" name="qst4">
+                <input type="radio" value="ljubljana" id="ljubljana" name="qst4" checked>
                 <label for="ljubljana">Ljubljana</label>
             </div>
             <div>
@@ -79,10 +79,10 @@
             </div>
         </div>
 
-        <div class="box_qst_rep">
+        <div class="box_qst">
             <h3 class="qst">Combien d'habitants compte l'Irlande en 2020 ?</h3>
             <div>
-                <input type="radio" value="1m" id="1m" name="qst5">
+                <input type="radio" value="1m" id="1m" name="qst5" checked>
                 <label for="1m">1,365 Million</label>
             </div>
             <div>
@@ -95,14 +95,14 @@
             </div>
         </div>
 
-        <input type="submit" value="C'est votre dernier mot ?" class="btn_envoyer">
+        <input type="button" value="C'est votre dernier mot ?" id="btn_envoyer">
 
     </form>
-    
+
     <div class="resultat">
         <h2>Cliquez sur le bouton pour voir les résultats !</h2>
-        <p class="aide"></p>
-        <p class="note"></p>
+        <p id="aide"></p>
+        <p id="note"></p>
     </div>
 
     <script src="app.js"></script>
