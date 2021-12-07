@@ -56,27 +56,27 @@ function afficheResultat (nbBonneReponse) {
 
     switch (nbBonneReponse) {
         case 0:
-            aideAffiche.innerHTML = "Retentez une autre réponse dans la case rouge, puis re-validez !";
-            titreResultat.innerHTML = "👎 Peux mieux faire ! 👎";
+            aideAffiche.innerText = "Retentez une autre réponse dans la case rouge, puis re-validez !";
+            titreResultat.innerText = "👎 Peux mieux faire ! 👎";
             break;
         case 1:
-            aideAffiche.innerHTML = "Retentez une autre réponse dans la case rouge, puis re-validez !";
-            titreResultat.innerHTML = "😭 Peux mieux faire ! 😭";
+            aideAffiche.innerText = "Retentez une autre réponse dans la case rouge, puis re-validez !";
+            titreResultat.innerText = "😭 Peux mieux faire ! 😭";
             break;
         case 2:
-            aideAffiche.innerHTML = "Retentez une autre réponse dans la case rouge, puis re-validez !";
-            titreResultat.innerHTML = "👀 Il reste quelques erreurs. 😭";
+            aideAffiche.innerText = "Retentez une autre réponse dans la case rouge, puis re-validez !";
+            titreResultat.innerText = "👀 Il reste quelques erreurs. 😭";
             break;
         case 3:
-            aideAffiche.innerHTML = "Retentez une autre réponse dans la case rouge, puis re-validez !";
-            titreResultat.innerHTML = "✨ Encore un effort ... 👀";
+            aideAffiche.innerText = "Retentez une autre réponse dans la case rouge, puis re-validez !";
+            titreResultat.innerText = "✨ Encore un effort ... 👀";
             break;
         case 4:
-            aideAffiche.innerHTML = "Retentez une autre réponse dans la case rouge, puis re-validez !";
-            titreResultat.innerHTML = "✨ Vous y êtes presque ! ✨";
+            aideAffiche.innerText = "Retentez une autre réponse dans la case rouge, puis re-validez !";
+            titreResultat.innerText = "✨ Vous y êtes presque ! ✨";
             break;
         default:
-            titreResultat.innerHTML = "✔️ Bravo, c'est un sans faute ! ✔️";
+            titreResultat.innerText = "✔️ Bravo, c'est un sans faute ! ✔️";
             
             boxQst.forEach((elem) => {
                 elem.classList.toggle("tout_juste");
@@ -84,10 +84,10 @@ function afficheResultat (nbBonneReponse) {
 
             divResultat.classList.toggle("tout_juste");
 
-            aideAffiche.innerHTML = "";
+            aideAffiche.innerText = "";
             break;
     }
-    noteAffiche.innerHTML = `${nbBonneReponse}/5`;
+    noteAffiche.innerText = `${nbBonneReponse}/5`;
 }
 
 function supprClassList () {
