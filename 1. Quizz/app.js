@@ -26,8 +26,8 @@ boxQst.forEach((elem, key) => {
         let item = e.target.value;
 
         reponse[key] = item;
-        boxQst[key].classList.remove("correct");
-        boxQst[key].classList.remove("false");
+        boxQst[key].style.background = 'white';
+        boxQst[key].style.background = 'white';
     })
 })
 
@@ -37,13 +37,16 @@ function verif() {
     reponse.forEach((elem, i) => {
         if (elem === listeResultat[i]) {
             totalCorrect++;
-            boxQst[i].classList.remove("correct");
-            boxQst[i].classList.add("correct");
+            boxQst[i].style.background = 'rgba(27, 236, 55, 0.527)';
 
         } else {
-            boxQst[i].classList.remove("false");
+            boxQst[i].style.background = 'rgba(255, 0, 0, 0.356)';
             boxQst[i].classList.add("false");
         }
+
+        setTimeout(() => {
+            boxQst[i].classList.remove("false");
+        }, 500);
     });
     
     afficheResultat(totalCorrect);

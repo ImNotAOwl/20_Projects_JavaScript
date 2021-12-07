@@ -122,7 +122,6 @@ body {
 }
 
 .false {
-    background-color: rgba(255, 0, 0, 0.356);
     animation: nonAnim 0.4s ease-in-out;
 }
 
