@@ -6,13 +6,22 @@
 }
 
 body {
-    font-family: Russo, sans-serif;
+    font-family: Arial, Helvetica, sans-serif, sans-serif;
     margin-bottom: 4%;
-    width: 50%;
-    margin: auto;
+    /* width: 50%; */
+    /* margin: auto; */
+}
+
+.container {
+    width: 70%;
+    max-width: 800px;
+    margin: 0 auto;
+    height: auto;
 }
 
 .titre {
+    font-family: Russo One, sans-serif;
+    font-weight: 100;
     text-align: center;
     margin: 2% 0;
     font-size: 3em;
@@ -31,7 +40,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
-    margin: 10px 0;
+    margin: 20px;
     padding: 1.7rem;
     border: 1px solid rgba(224, 135, 19, 0.479);
     border-radius: 0.8em;
@@ -92,7 +101,7 @@ body {
     border: 1px solid rgba(224, 135, 19, 0.479);
     border-radius: 0.4em;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    width: fit-content;
+    /* width: fit-content; */
 }
 
 #aide {
@@ -111,7 +120,7 @@ body {
 
 .false {
     background-color: rgba(255, 0, 0, 0.356);
-    animation: nonAnim 0.5s;
+    animation: nonAnim 0.4s ease-in-out;
 }
 
 @keyframes nonAnim {
@@ -130,4 +139,32 @@ body {
     100% {
         transform: translateX(0px);
     }
+}
+
+.tout_juste {
+    animation: clignotte 1s ease-in-out;
+}
+
+@keyframes clignotte {
+    0% { 
+        background-color: rgba(255, 211, 100, 0.534);
+        opacity: 1;
+    }
+    25% {
+        background-color: rgba(255, 211, 100, 0.534);
+        opacity: 0.2;
+    }
+    50% {
+        background-color: rgba(255, 211, 100, 0.534);
+        opacity: 1;
+    }
+    75% {
+        background-color: rgba(255, 211, 100, 0.534);
+        opacity: 0.2;
+    }
+    100% {
+        background-color: rgba(255, 211, 100, 0.534);
+        opacity: 1;
+    }
+    
 }
