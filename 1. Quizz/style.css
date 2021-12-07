@@ -70,6 +70,8 @@ body {
 }
 
 #btn_envoyer {
+    border: none;
+    outline: none;
     margin: 4% 0;
     align-self: center;
     font-size: 2em;

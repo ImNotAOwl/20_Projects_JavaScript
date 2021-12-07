@@ -47,7 +47,7 @@ function verif() {
     });
     
     afficheResultat(totalCorrect);
-    supprClassList;
+    supprClassList ();
 }
 
 
@@ -82,7 +82,7 @@ function afficheResultat (nbBonneReponse) {
                 elem.classList.toggle("tout_juste");
             })
 
-            document.querySelector(".resultat").classList.toggle("tout_juste");
+            divResultat.classList.toggle("tout_juste");
 
             aideAffiche.innerHTML = "";
             break;
