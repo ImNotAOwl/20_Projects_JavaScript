@@ -1,4 +1,4 @@
-const CLEAPI = '1e3cf9a7765889c14606311460599dec';
+const CLEAPI = config.CLEAPI;
 
 const temps = document.querySelector(".temps");
 const temperature = document.querySelector(".temperature");
