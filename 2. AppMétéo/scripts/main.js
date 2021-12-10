@@ -1,4 +1,4 @@
-const CLEAPI = config.CLEAPI;
+var CLEAPI = config.CLEAPI;
 
 const temps = document.querySelector(".temps");
 const temperature = document.querySelector(".temperature");
