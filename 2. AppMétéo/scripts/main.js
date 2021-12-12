@@ -1,3 +1,6 @@
+import config from "./config.js";
+import jourSemaineOrdonne from "./Utilitaire/gestionTemps.js";
+
 var CLEAPI = config.CLEAPI;
 
 const temps = document.querySelector(".temps");
@@ -12,7 +15,8 @@ let jourTempe = document.querySelectorAll(".tempe");
 let jourSemainePro = document.querySelectorAll(".jour");
 let tempeSemainePro = document.querySelectorAll(".temp_semaine_pro");
 
-const imageInfo = document.querySelector("img");
+const imageInfo = document.querySelector(".image_logo");
+const chargement = document.querySelector(".overlay_chargement");
 
 // console.log(jourHeure, jourTempe, jourSemainePro, tempeSemainePro);
 
@@ -53,10 +57,25 @@ function AppelAPI(long, lat) {
 
             // On affiche les températures toutes les 3h. //
 
+            let heureJournee = new Date ().getHours(); // recupère l'heure actuelle
+
             jourHeure.forEach((elem, key) => {
-                let heureJournee = new Date(heureAPI[j].dt*1000).getUTCHours();
                 
-                elem.innerText = `${heureJournee}h`;
+                // recupere l'heure UNIX sur l'API
+                //let heureJournee = new Date(heureAPI[j].dt * 1000).getUTCHours();
+                
+                // on incrémente l'heure de 3h et on ajuste les cas de 00h et quand on dépasse 24
+                let heureInc = heureJournee + key * 3;
+
+                if (heureInc > 24) {
+                    elem.innerText = `${heureInc - 24} h`;                   
+                } else if (heureInc === 24) {
+                    elem.innerText = `00 h`;
+                } else {
+                    elem.innerText = `${heureInc} h`;           
+                }
+
+                //on affiche les tempé sous les heures.
                 jourTempe[key].innerText = `${Math.trunc(heureAPI[j].temp)}°`;
 
                 j += 3;
@@ -65,18 +84,23 @@ function AppelAPI(long, lat) {
             // On affiche les prévisions pour la semaine prochaine //
 
             jourSemainePro.forEach((elem, key) => {
-                let jourSemaine = new Date(jourAPI[key+1].dt*1000).toLocaleDateString("fr-FR", {weekday: 'short'});
+                //recupère sur l'API les dates a partir du lendemain et affiche les tempés en dessous.
+                // let jourSemaine = new Date(jourAPI[key + 1].dt * 1000).toLocaleDateString("fr-FR", { weekday: 'short' });
 
-                elem.innerText = jourSemaine;
-                tempeSemainePro[key].innerText = `${Math.trunc(jourAPI[key+1].temp.day)}°`;
+                //recupère 1er chararctere qu'on met en maj puis les 2 suivants.
+                let jourCourt = `${jourSemaineOrdonne[key+1].charAt(0).toUpperCase()}${jourSemaineOrdonne[key+1].slice(1,3)}.`;
+
+                elem.innerText = jourCourt;
+                tempeSemainePro[key].innerText = `${Math.trunc(jourAPI[key + 1].temp.day)}°`;
             });
 
-            let nomSVG = resultatsAPI.current.weather[0].icon.charAt(2);
-
-            if (nomSVG == "n") {
-                imageInfo.src = `./ressources/nuit/${resultatsAPI.current.weather[0].icon}.svg`
-            } else {
+            if (heureJournee >= 6 && heureJournee < 21) {
                 imageInfo.src = `./ressources/jour/${resultatsAPI.current.weather[0].icon}.svg`
+                
+            } else {
+                imageInfo.src = `./ressources/nuit/${resultatsAPI.current.weather[0].icon}.svg`
             }
+
+            chargement.classList.add("disparition");
         })
 }

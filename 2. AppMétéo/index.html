@@ -1,26 +1,35 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AppMétéo</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <div class="container">
-        
+
+        <div class="overlay_chargement">
+            <img src="./ressources/chargement/circles.svg" alt="logo chargement">
+        </div>
+
         <h1>Application météo</h1>
 
         <div class="bloc_image_info">
+
             <div class="image">
-                <img src="./ressources/jour/01d.svg" alt="logo du temps qu'il fait" class="image_logo">
+                <img src="" alt="logo du temps qu'il fait" class="image_logo">
             </div>
+
             <div class="bloc_info">
                 <p class="temps"></p>
                 <p class="temperature"></p>
                 <p class="localisation"></p>
             </div>
+
         </div>
 
         <div class="bloc_prevision">
@@ -85,11 +94,11 @@
             </div>
         </div>
 
+
     </div>
- 
-   
+
     <script type="module" src="scripts/main.js"></script>
-    <script src="scripts/config.js"></script>
 
 </body>
+
 </html>
