@@ -1,0 +1,92 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #333;
+}
+
+.titre_pokedex {
+    padding: 2% 0;
+    text-align: center;
+    color: #f1f1f1;
+    font-size: 2.4em;
+}
+
+.recherche {
+    position: relative;
+    max-width: 700px;
+    width: 70%;
+    min-width: 450px;
+    margin: 10px auto 30px auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: center;
+}
+
+#champs_recherche {
+    position: relative;
+    width: 700px;
+    height: 50px;
+    font-size: 1.6em;
+    border-radius: 0.2em;
+    padding: 5px 8px;
+}
+
+.recherche label {
+    color: rgba(0, 0, 0, 0.527);
+    position: absolute;
+    font-size: 1em;
+    top: px;
+    padding-left: 10px;
+    z-index: 12;
+    cursor: text;
+    transition: ease-out 0.5s;
+}
+
+.recherche:focus-within label {
+    color: #f1f1f1;
+    position: absolute;
+    font-size: 0.9em;
+    top: px;
+    padding-left: 10px;
+    z-index: 12;
+    cursor: text;
+    transform: translateY(-40px);
+    transition: ease-in-out 0.5s;
+}
+
+
+
+.recherche input[type="submit"] {
+    position: absolute;
+    height: 47px;
+    width: 100px;
+    outline: none;
+    border: none;
+    font-size: 1.1em;
+    background-color: cornflowerblue;
+    color: #f1f1f1;
+    border-radius: 0.2em;
+    transition: ease-out 0.3s;
+    align-self: flex-end;
+}
+
+.recherche input[type="submit"]:hover {
+    height: 47px;
+    width: 100px;
+    outline: none;
+    border: none;
+    font-size: 1.1em;
+    background-color: rgb(209, 141, 64);
+    color: #000000;
+    border-radius: 0.2em;
+    transition: ease-in 0.2s;
+}
+
+
