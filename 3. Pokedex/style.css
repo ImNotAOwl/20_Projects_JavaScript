@@ -23,10 +23,11 @@ body {
     min-width: 450px;
     margin: 10px auto 30px auto;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: stretch;
-    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 #champs_recherche {
@@ -42,31 +43,26 @@ body {
     color: rgba(0, 0, 0, 0.527);
     position: absolute;
     font-size: 1em;
-    top: px;
     padding-left: 10px;
     z-index: 12;
     cursor: text;
     transition: ease-out 0.5s;
 }
 
-.recherche:focus-within label {
+.recherche:focus-within label,
+.recherche.active_input label {
     color: #f1f1f1;
-    position: absolute;
     font-size: 0.9em;
-    top: px;
-    padding-left: 10px;
-    z-index: 12;
     cursor: text;
     transform: translateY(-40px);
     transition: ease-in-out 0.5s;
 }
 
 
-
 .recherche input[type="submit"] {
-    position: absolute;
-    height: 47px;
-    width: 100px;
+    /* position: absolute; */
+    height: 46px;
+    width: 99px;
     outline: none;
     border: none;
     font-size: 1.1em;
@@ -75,11 +71,12 @@ body {
     border-radius: 0.2em;
     transition: ease-out 0.3s;
     align-self: flex-end;
+    margin: 0 10px 2px 5px;
 }
 
 .recherche input[type="submit"]:hover {
-    height: 47px;
-    width: 100px;
+    height: 46px;
+    width: 99px;
     outline: none;
     border: none;
     font-size: 1.1em;
@@ -87,6 +84,8 @@ body {
     color: #000000;
     border-radius: 0.2em;
     transition: ease-in 0.2s;
+    cursor: pointer;
+    margin: 0 10px 2px 5px;
 }
 
 
