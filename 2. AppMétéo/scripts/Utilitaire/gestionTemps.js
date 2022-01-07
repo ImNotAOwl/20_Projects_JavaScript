@@ -7,24 +7,14 @@ let indexJour = jourSemaine.indexOf(jourAjd);
 
 let jourSemaineOrdonne = [];
 
-// console.log(jourSemaine, jourAjd);
-// console.log(jourSemaine.indexOf(jourAjd));
+jourSemaineOrdonne = jourSemaine.splice(indexJour, jourSemaine.length);
 
-for (let i = indexJour; i < jourSemaine.length; i++) {
-    let j = 0;
-    jourSemaineOrdonne[j] = jourSemaine[i];
-    
-    if (i === jourSemaine.length - 1) {
-        for (let k = 0; k < indexJour; k++) {
-            
-            jourSemaineOrdonne.push(jourSemaine[k]);
-            
-        }
-    }
-    j++;
-}
+jourSemaine.splice(0, indexJour).forEach((elem) => {
+    jourSemaineOrdonne.push(elem);
+});
 
 jourSemaineOrdonne.push(jourSemaineOrdonne[0]);
+
 // console.log(jourSemaineOrdonne);
 
 export default jourSemaineOrdonne;
