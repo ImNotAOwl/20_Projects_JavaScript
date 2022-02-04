@@ -3,4 +3,4 @@ I follow the course "20 Projets en JavaScript" on Udemy. So, that is my repo for
 
   - 1 : :white_check_mark: That's it. "Quizz" is done
   - 2 : :white_check_mark: Okay, "AppMeteo" is done
-  - 3 : :tada:  Next one, "Pokédex" !
+  - 3 : :white_check_mark: "Pokédex" up to date ! You can find your favorite Pokemon
