@@ -1,5 +1,6 @@
 const champsRecherche = document.getElementById('champs_recherche');
 const listPoke = document.querySelector('.liste_poke');
+const chargement = document.querySelector('.loader');
 
 let allPokemon = [];
 let tableauFin = [];
@@ -69,6 +70,8 @@ function fetchPokemonComplet(pokemon) {
                 }
 
                 createCard(tableauFin);
+                chargement.style.display = "none";
+
         })
     })
 }
@@ -95,7 +98,6 @@ function createCard(array) {
         carte.appendChild(idCarte);
 
         listPoke.appendChild(carte);
-        
     }
 }
 
